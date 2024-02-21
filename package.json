@@ -11,5 +11,11 @@
     "name": "Kola Kolade",
     "email": "kolakolade@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
