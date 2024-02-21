@@ -4,6 +4,16 @@ const app = express();
 
 const port = process.env.PORT || 3200;
 
+app.get('/', (req, res) => {
+  res.type('text/plain');
+  res.send('Lasgidi');
+});
+
+app.get('/about', (req, res) => {
+  res.type('text/plain');
+  res.send('About Lasgidi');
+});
+
 // 404 page
 app.use((req, res) => {
   res.type('text/plain');
