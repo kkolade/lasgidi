@@ -10,6 +10,9 @@ import 'dotenv/config';
 // import ejs from 'ejs';
 import expressLayouts from 'express-ejs-layouts';
 
+// import from lib
+import { getFortune } from './lib/fortune.js';
+
 // Variables
 const port = process.env.PORT;
 // const __filename = fileURLToPath(import.meta.url);
@@ -27,10 +30,6 @@ app.set('views', 'views');
 // app.engine('html', ejs.renderFile);
 app.set('view engine', 'ejs');
 
-const user = {
-  firstName: 'Leke',
-  lastName: 'Kolade',
-};
 // Home page
 app.get('/', (req, res) => {
   res.render('pages/index', {
@@ -42,6 +41,7 @@ app.get('/about', (req, res) => {
   res.render('pages/about', {
     title: 'About Page',
     layout: './layouts/sidebar',
+    fortune: getFortune(),
   });
 });
 
