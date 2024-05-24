@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server.js --exec babel-node"
+    "start": "nodemon ./server.js --exec babel-node",
+    "styles": "postcss public/styles/pcss/main.pcss -o public/styles/main.css -w"
   },
   "keywords": [],
   "author": {
@@ -27,6 +28,18 @@
     "@babel/core": "^7.24.5",
     "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.24.5",
-    "nodemon": "^3.1.0"
+    "autoprefixer": "^10.4.19",
+    "lost": "^9.0.2",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
+    "postcss-advanced-variables": "^4.0.0",
+    "postcss-cli": "^11.0.0",
+    "postcss-functions": "^4.0.2",
+    "postcss-import": "^16.1.0",
+    "postcss-mixins": "^10.0.1",
+    "postcss-nested": "^6.0.1",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^9.5.13",
+    "postcss-simple-vars": "^7.0.1"
   }
 }
